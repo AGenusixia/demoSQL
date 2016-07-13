@@ -21,8 +21,8 @@ Select
 	,	regDim.Levl7_Key As sales_area_cd
 	,	regDim.Levl7_Key As ord_area_cd
 	,	modDim.LEVL4_KEY As Child_Modality
-	,	lcldim.Globl_SEGMNT5_Desc As Local_Modality_Desc
-	,	lcldim.globl_segmnt5_key As L6_GPH_modality_desc
+	,	modDim.Globl_SEGMNT5_Desc As Local_Modality_Desc
+	,	modDim.globl_segmnt5_key As L6_GPH_modality_desc
 	,	modDim.LEVL4_DESC As A_lvl_modality_desc
 	,	detL.trans_typ
 	,	modDim.GLOBL_SEGMNT5_KEY As Glb_Modality
@@ -99,8 +99,8 @@ From IDL.HCIT_PS9_ORD_FINANCE_L finL
 		On prdL.glb_company_idn = cmpDim.GLOBL_SEGMNT1_IDN
 	Inner Join IDL.GLOBAL_SEGMENT11_CHANNEL_DIM chDim
 		On prdL.glb_channel_idn = chDim.GLOBL_SEGMNT11_IDN
-	Inner Join IDL.GLOBAL_SEGMENT5_MODALITY_DIM lclDim
-		On prdL.local_modality = lclDim.GLOBL_SEGMNT5_ID
+	--Inner Join IDL.GLOBAL_SEGMENT5_MODALITY_DIM lclDim
+	--	On prdL.local_modality = lclDim.GLOBL_SEGMNT5_ID
 Where
 	Not Exists
 	(
