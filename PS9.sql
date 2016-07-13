@@ -4,6 +4,8 @@ Author	: Wen Zhu
 Date	: 16/04/2016
 Note	: To keep the view as similar to the table without changing the destination table, 
 		  we're going to have a lot of alias for it
+
+		: Added comments by Santosh
 *****************************************************************************************/
 Alter View [IDL].[vwIDLTransactionsHCITOrdersVC]
 As
